@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css"/>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 <body>
     <div class="container">
     <h1>AI Poem generator</h1>
-   <form>
+   <form id="poem-generator">
     <input type="text" placeholder="Enter topic of interest" class="instructions"/>
     <input type="submit" class="submit-button"/>
    </form>
 <br>
 <br>
-<div class="poem">Your poem will display here..</div>
+<div id="poem-element" class="poem"></div>
 </div>
 
    <footer> This page was coded by <a href="https://github.com/hmach711">HMach🍕</a> 
