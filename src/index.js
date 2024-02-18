@@ -1,24 +1,34 @@
-function generatePoem (event) {
+
+
+function displayRecipe (response){
+
+
+    new Typewriter("#recipe-element", {
+        strings:response.data.answer ,
+        autoStart: true,
+        delay:50,
+        cursor:"",
+    
+      });
+    }
+
+
+
+function generateRecipe (event) {
 event.preventDefault ();
 
-let poemElement=document.querySelector ("poem-element");
+
+let userSearch=document.querySelector ("#user-instruction");
+
+let apiKey= "df33e33bd04657eta6o8f2efea2aa5fb";
+let prompt=`provide a simple recipe based on the ${userSearch.value} display recipe steps on seperate lines always`;
+let context="You specialise in simple short and tasty recipes. Display recipe title in BOLD always. EVERY method step on seperate line in html format";
+let apiUrl=`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
 
-new Typewriter("#poem-element", {
-    strings: "Waves come crashing to grey sullen shores",
-    autoStart: true,
-    delay:50,
-    cursor:"",
-
-  });
-
-
-
-
-
+axios.get (apiUrl).then (displayRecipe);
+displayPoem(response.data.answer);
 }
 
-
-
-let poemGenerator=document.querySelector ("#poem-generator");
-poemGenerator.addEventListener ("submit", generatePoem);
+let recipeGenerator=document.querySelector ("#recipe-generator");
+recipeGenerator.addEventListener ("submit", generateRecipe);
