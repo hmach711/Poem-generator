@@ -1,3 +1,57 @@
 body {
-    background-color: aqua;
+background-color:#2a2438;
+
 }
+
+.container {
+    background-color: #5c5470;
+    margin: 30px auto;
+    width: 600px;
+    text-align: center;
+    border-radius: 5px;
+    }
+    h1 {
+        font-size:  45px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+    form{
+    padding-top: 15px;
+    font-size: 20px;
+    }
+
+    .instructions {
+margin-left: 15px;
+padding: 5px 5px;
+background-color:#585555 ;
+color: azure;
+font-weight: bolder;
+    }
+
+    .submit-button {
+        margin-left: 10px;
+        background: #1f1a2e;
+        color: rgb(136, 133, 133);
+        border: none;
+        width: 100px;
+        font-size: 16px;
+        border-radius: 10px;
+        padding: 10px 10px;
+      }
+
+      .poem {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20px;
+display: block;
+padding-bottom: 50px;
+      }
+      
+      footer {
+display: block;
+margin: 30px auto;
+width: 600px;
+text-align: center;
+font-size: 12px;
+font-weight: bold;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
