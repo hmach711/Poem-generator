@@ -25,9 +25,11 @@ let prompt=`provide a simple recipe based on the ${userSearch.value} display rec
 let context="You specialise in simple short and tasty recipes. Display recipe title in BOLD always. EVERY method step on seperate line in html format";
 let apiUrl=`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+let recipeElement=document.querySelector ("#recipe-element");
+recipeElement.innerHTML=`Generating your recipe on ${userSearch.value}...`;
 
 axios.get (apiUrl).then (displayRecipe);
-displayPoem(response.data.answer);
+displayRecipe(response.data.answer);
 }
 
 let recipeGenerator=document.querySelector ("#recipe-generator");
